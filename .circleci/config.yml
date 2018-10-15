@@ -18,6 +18,6 @@ workflows:
     jobs:
       - build:
           context: ${CIRCLE_BRANCH}
-          branches:
-            ignore:
-              - master
+          filters:
+            branches:
+              ignore: master
