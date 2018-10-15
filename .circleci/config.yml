@@ -17,4 +17,7 @@ workflows:
   build-test-deploy:
     jobs:
       - build:
-          context: dev
+          context: ${CIRCLE_BRANCH}
+          branches:
+            ignore:
+              - master
